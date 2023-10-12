@@ -1,0 +1,10 @@
+# Installed dependencies and build artifacts
+/node_modules/
+/dist/
+/.eslintcache
+/.stryker-tmp/
+/coverage.html
+
+# Editor and file explorer artifacts
+.vscode/
+.DS_Store

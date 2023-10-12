@@ -1,0 +1,2 @@
+# Ignore files in the templates directory since they largely won't be valid TypeScript.
+/templates/

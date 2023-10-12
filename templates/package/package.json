@@ -1,0 +1,40 @@
+{
+	"name": "{{name}}",
+	"version": "0.0.0",
+	"type": "module",
+	"files": [
+		"dist",
+		"!dist/**/*.tsbuildinfo",
+		"!dist/**/*.js.map",
+		"!dist/**/*.spec.js",
+		"!dist/**/*.test.js",
+		"!dist/**/test-utils"
+	],
+	"exports" : {
+		".": {
+			"import": "./dist/mjs/index.js",
+			"require": "./dist/cjs/index.js",
+			"types": "./dist/types/index.d.ts"
+		}
+	},
+	"main": "./dist/cjs/index.js",
+	"types": "./dist/types/index.d.ts",
+	"scripts": {
+		"lint": "eslint . --ext .ts --cache",
+		"lint-fix": "npm run lint -- --fix",
+		"build": "npm run build:mjs && npm run build:cjs && npm run build:types",
+		"build:mjs": "tsc",
+		"build:cjs": "tsc -p tsconfig-cjs.json && sh fixup-cjs.sh",
+		"build:types": "tsc -p tsconfig-types.json",
+		"clean": "rm -rf dist",
+		"test": "npm run build:mjs && npm run test:run",
+		"test:unit": "npm run build:mjs && npm run test:unit:run",
+		"test:integration": "npm run build:mjs && npm run test:integration:run",
+		"test:run": "npm run test:unit:run && npm run test:integration:run",
+		"test:unit:run": "mocha dist/mjs/**/*.spec.js --config .mocharc-unit.yaml",
+		"test:integration:run": "mocha dist/mjs/**/*.test.js --config .mocharc-integration.yaml",
+		"tdd": "nodemon --exec 'npm run test:unit -- -- --reporter min'",
+		"coverage": "stryker run",
+		"preversion": "npm run lint && npm run clean && npm run build && npm run test:run"
+	}
+}

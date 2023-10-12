@@ -1,0 +1,2 @@
+# Ignore built files when linting.
+/dist/

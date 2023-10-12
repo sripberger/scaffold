@@ -1,0 +1,7 @@
+# Mocha config for unit tests.
+reporter: dot
+require:
+  - source-map-support/register
+file:
+  - dist/mjs/test-utils/setup/all.js
+  - dist/mjs/test-utils/setup/unit.js

@@ -1,0 +1,32 @@
+{
+	"name": "@sripberger/scaffold",
+	"version": "0.0.0",
+	"description": "Scaffold generators for personal TypeScript repositories",
+	"author": "Steve Ripberger",
+	"license": "MIT",
+	"repository": "github:sripberger/scaffold",
+	"type": "module",
+	"files": [
+		"/bin/",
+		"/package-dependencies/",
+		"/templates/"
+	],
+	"bin": {
+		"create-package": "./bin/create-package.js"
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"lintfix": "npm run lint -- --fix",
+		"preversion": "npm run lint",
+		"prepublishOnly": "git push && git push --tags"
+	},
+	"dependencies": {
+		"decamelize": "^6.0.0",
+		"desm": "^1.3.0",
+		"simple-scaffold": "^1.7.1"
+	},
+	"devDependencies": {
+		"@sripberger/eslint-config-plain": "^0.1.0",
+		"eslint": "^8.46.0"
+	}
+}

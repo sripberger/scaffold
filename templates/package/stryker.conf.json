@@ -1,0 +1,22 @@
+{
+	"reporters": ["html", "progress"],
+	"htmlReporter": {
+		"fileName": "coverage.html"
+	},
+	"checkers": ["typescript"],
+	"buildCommand": "npm run build:mjs",
+	"mutate": [
+		"src/**/*.ts",
+		"!src/**/*.spec.ts",
+		"!src/**/*.test.ts",
+		"!src/test-utils/**"
+	],
+	"testRunner": "mocha",
+	"mochaOptions": {
+		"config": ".mocharc-unit.yaml",
+		"spec": ["dist/mjs/**/*.spec.js"]
+	},
+	"warnings": {
+		"slow": false
+	}
+}

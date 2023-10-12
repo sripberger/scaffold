@@ -1,0 +1,24 @@
+# List development dependencies for new packages here.
+# They will be passed to `npm install --save-dev` as arguments.
+
+@sripberger/eslint-config@latest
+@stryker-mutator/core@7
+@stryker-mutator/mocha-runner@7
+@stryker-mutator/typescript-checker@7
+@types/chai@4
+@types/mocha@10
+@types/node@18
+@types/sinon@10
+@types/sinon-chai@3
+@typescript-eslint/eslint-plugin@5
+@typescript-eslint/parser@5
+chai@4
+eslint@8
+eslint-import-resolver-typescript@3
+eslint-plugin-import@2
+mocha@10
+nodemon@3
+sinon@10
+sinon-chai@3
+source-map-support@latest
+typescript@5

@@ -1,0 +1,3 @@
+extends: "@sripberger/eslint-config-plain"
+parserOptions:
+  sourceType: module

@@ -1,0 +1,2 @@
+# List production dependencies for new packages here.
+# They will be passed to `npm install` as arguments.
