@@ -1,12 +1,12 @@
 {
 	"name": "@sripberger/scaffold",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"lockfileVersion": 3,
 	"requires": true,
 	"packages": {
 		"": {
 			"name": "@sripberger/scaffold",
-			"version": "0.0.0",
+			"version": "0.1.0",
 			"license": "MIT",
 			"dependencies": {
 				"decamelize": "^6.0.0",
