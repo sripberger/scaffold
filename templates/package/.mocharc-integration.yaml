@@ -4,3 +4,5 @@ require:
 file:
   - dist/mjs/test-utils/setup/all.js
   - dist/mjs/test-utils/setup/integration.js
+reporterOption:
+  - 'maxDiffSize=0'
