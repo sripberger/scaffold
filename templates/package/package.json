@@ -31,8 +31,8 @@
 		"test:unit": "npm run build:mjs && npm run test:unit:run",
 		"test:integration": "npm run build:mjs && npm run test:integration:run",
 		"test:run": "npm run test:unit:run && npm run test:integration:run",
-		"test:unit:run": "mocha dist/mjs/**/*.spec.js --config .mocharc-unit.yaml",
-		"test:integration:run": "mocha dist/mjs/**/*.test.js --config .mocharc-integration.yaml",
+		"test:unit:run": "mocha 'dist/mjs/**/*.spec.js' --config .mocharc-unit.yaml",
+		"test:integration:run": "mocha 'dist/mjs/**/*.test.js' --config .mocharc-integration.yaml",
 		"tdd": "nodemon --exec 'npm run test:unit -- -- --reporter min'",
 		"coverage": "stryker run",
 		"preversion": "npm run lint && npm run clean && npm run build && npm run test:run"
