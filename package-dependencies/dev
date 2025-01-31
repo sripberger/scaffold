@@ -1,7 +1,7 @@
 # List development dependencies for new packages here.
 # They will be passed to `npm install --save-dev` as arguments.
 
-@sripberger/eslint-config@latest
+@sripberger/eslint-config@0.1
 @stryker-mutator/core@7
 @stryker-mutator/mocha-runner@7
 @stryker-mutator/typescript-checker@7
