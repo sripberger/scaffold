@@ -14,7 +14,7 @@
 				"simple-scaffold": "^1.7.1"
 			},
 			"bin": {
-				"create-package": "bin/create-package.js"
+				"create-package": "dist/create-package.js"
 			},
 			"devDependencies": {
 				"@sripberger/eslint-config": "^0.2.6",
