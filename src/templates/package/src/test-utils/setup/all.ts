@@ -1,7 +1,7 @@
-import chai from "chai";
+import {use as chaiUse} from "chai";
 import sinonChai from "sinon-chai";
 
 
-chai.use(sinonChai);
+chaiUse.use(sinonChai);
 
 // Place any additional setup for all tests here.
