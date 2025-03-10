@@ -14,9 +14,7 @@ export default [
 		},
 	},
 	{
-		ignores: [
-			"src/templates", // Do not lint template files as they will largely not be valid TS.
-			"dist",
-		],
+		// Do not lint template files as they will largely not be valid TS.
+		ignores: ["src/templates"],
 	},
 ];

@@ -17,7 +17,7 @@
 				"create-package": "dist/create-package.js"
 			},
 			"devDependencies": {
-				"@sripberger/eslint-config": "^0.2.6",
+				"@sripberger/eslint-config": "^0.2.7",
 				"@types/node": "^22.13.10",
 				"eslint": "^9.22.0",
 				"jiti": "^2.4.2"
@@ -376,9 +376,9 @@
 			}
 		},
 		"node_modules/@sripberger/eslint-config": {
-			"version": "0.2.6",
-			"resolved": "https://registry.npmjs.org/@sripberger/eslint-config/-/eslint-config-0.2.6.tgz",
-			"integrity": "sha512-NMQn7nro+AgS+Kn4NgbdRFYyi4kO6AC9VR2kk//PrKnqLO4U/c7xOjo3EloC4ReCnaqoTwvV44BQtte7MPVc7Q==",
+			"version": "0.2.7",
+			"resolved": "https://registry.npmjs.org/@sripberger/eslint-config/-/eslint-config-0.2.7.tgz",
+			"integrity": "sha512-n3Pm8J+SbeWkXYHdOcvuI5jZfqFzeusM1Yyv4eGA3ggr3WyHd/ET9Rpru6PyjiQicgHgW0EI3j6/ty0zuTFnqg==",
 			"dev": true,
 			"license": "MIT",
 			"dependencies": {

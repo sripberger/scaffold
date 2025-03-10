@@ -25,7 +25,7 @@
 		"simple-scaffold": "^1.7.1"
 	},
 	"devDependencies": {
-		"@sripberger/eslint-config": "^0.2.6",
+		"@sripberger/eslint-config": "^0.2.7",
 		"@types/node": "^22.13.10",
 		"eslint": "^9.22.0",
 		"jiti": "^2.4.2"
