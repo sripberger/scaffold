@@ -17,7 +17,7 @@
 		"lint-fix": "npm run lint -- --fix",
 		"build": "rm -rf dist && tsc && cp -r src/dependencies src/templates dist",
 		"preversion": "npm run lint",
-		"prepublishOnly": "git push && git push --tags"
+		"prepublishOnly": "npm run build && git push && git push --tags"
 	},
 	"dependencies": {
 		"decamelize": "^6.0.0",
