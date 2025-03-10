@@ -8,7 +8,7 @@ import {join as desmJoin} from "desm";
 import {Scaffold} from "simple-scaffold";
 
 
-const dirname = desmJoin(import.meta.url, "..");
+const dirname = desmJoin(import.meta.url);
 
 async function main(): Promise<void> {
 	await Scaffold({ // eslint-disable-line new-cap
