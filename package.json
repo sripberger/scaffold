@@ -1,6 +1,6 @@
 {
 	"name": "@sripberger/scaffold",
-	"version": "0.2.5",
+	"version": "0.2.6",
 	"description": "Scaffold generators for personal TypeScript repositories",
 	"author": "Steve Ripberger",
 	"license": "MIT",
