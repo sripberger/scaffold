@@ -7,13 +7,14 @@ import decamelize from "decamelize";
 import {join as desmJoin} from "desm";
 import {Scaffold} from "simple-scaffold";
 
-const projectDir = desmJoin(import.meta.url, "..");
 
-async function main() {
+const dirname = desmJoin(import.meta.url, "..");
+
+async function main(): Promise<void> {
 	await Scaffold({ // eslint-disable-line new-cap
 		name: inferPackageName(),
 		output: ".",
-		templates: [path.join(projectDir, "templates", "package")],
+		templates: [path.join(dirname, "templates", "package")],
 		quiet: true,
 	});
 
@@ -25,13 +26,13 @@ async function main() {
 	await installDeps("prod");
 }
 
-function inferPackageName() {
+function inferPackageName(): string {
 	const parentDir = path.basename(process.cwd());
 	return decamelize(parentDir).replace(/[^a-z0-9]+/g, "-");
 }
 
-async function installDeps(depsType) {
-	const depsFile = path.join(projectDir, "package-dependencies", depsType);
+async function installDeps(depsType: "dev" | "prod"): Promise<void> {
+	const depsFile = path.join(dirname, "dependencies", depsType);
 	const depsText = await fs.readFile(depsFile, {encoding: "utf8"});
 	const deps = depsText
 		.split("\n")
