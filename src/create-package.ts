@@ -5,7 +5,7 @@ import path from "node:path";
 
 import decamelize from "decamelize";
 import {join as desmJoin} from "desm";
-import {Scaffold} from "simple-scaffold";
+import {LogLevel, Scaffold} from "simple-scaffold";
 
 
 const dirname = desmJoin(import.meta.url);
@@ -15,7 +15,7 @@ async function main(): Promise<void> {
 		name: inferPackageName(),
 		output: ".",
 		templates: [path.join(dirname, "templates", "package")],
-		quiet: true,
+		logLevel: LogLevel.none,
 	});
 
 	// npm will not publish any file named .gitignore, so we need to name it differently in the
